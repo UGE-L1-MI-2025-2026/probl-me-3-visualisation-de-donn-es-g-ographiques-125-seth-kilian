@@ -6,11 +6,11 @@ sf = Reader("departements-20180101")
 
 print(sf.records())
 
-seine_et_marne = sf.shape(47)
-print(seine_et_marne.bbox)
+# seine_et_marne = sf.shape(47)
+# print(seine_et_marne.bbox)
 
-points = [(i[0]*15, i[1]*15) for i in seine_et_marne.points]
+# points = [(i[0]*15, i[1]*15) for i in seine_et_marne.points]
 
-polygone(points, couleur="blue")
-attend_ev()
-ferme_fenetre()
+# polygone(points, couleur="blue")
+# attend_ev()
+# ferme_fenetre()

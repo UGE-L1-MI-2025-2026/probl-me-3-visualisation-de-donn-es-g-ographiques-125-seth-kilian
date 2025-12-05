@@ -28,10 +28,11 @@ def place_point(x, y, a, B, C):
     
 
 sf = shapefile.Reader("departements-20180101")
-seine_et_marne = sf.shape(47)
-long_min, lat_min, long_max, lat_max = seine_et_marne.bbox
+dept = sf.shape(50)
+long_min, lat_min, long_max, lat_max = dept.bbox
+# ile = dept.parts[0]
 
-points_mercator = [mercator(long, lat) for long, lat in seine_et_marne.points]
+points_mercator = [mercator(long, lat) for long, lat in dept.points]
 
 x_min, y_min = mercator(long_min, lat_min)
 x_max, y_max = mercator(long_max, lat_max)
